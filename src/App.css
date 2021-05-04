@@ -1,38 +1,309 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    min-height: 100vh;
+    background: linear-gradient(  #2b1055, #7597de);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff; 
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #fff;
+    color: #2b1055;
+
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before{
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient( to top, #1c0522, transparent);
+    z-index: 1000;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#fly, #float, #drive, #drove{
+    position: absolute;
+    z-index: 10;
+    width: auto;
+    animation: float 10s linear infinite;
+    animation-delay: calc(-1s * 3); 
+}
+
+#float{
+    animation-delay: calc(-1s * 2); 
+}
+
+#drive{
+    animation-delay: calc(-1s * 1);
+}
+
+#drove{
+    animation-delay: calc(-1s * 0);
+}
+
+@keyframes float{
+    0%, 100%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+}
+
+#drove{
+    z-index: 8;
+}
+
+#text{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 3vw;
+    z-index: 9;
+}
+
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.sec h3{
+    font-size: 2.5em;
+    margin: 10px 0px;
+    color: #fff;
+}
+
+.sec h4{
+    color: rgb(160, 158, 158);
+    padding: 10px 0px;
+
+}
+
+.sec ul li{
+    color: rgb(161, 222, 226);
+}
+
+.sec ul li p{
+    font-size: 1.2em;
+    color: rgb(212, 211, 211);
+}
+
+
+.sec p{
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* cards */
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px 0;
+}
+
+.card-container .card{
+    position: relative;
+    min-width: 320px;
+    height: 470px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+                inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+                      5px 5px 15px rgba(0, 0, 0, 0.3),
+                      -5px -5px 15px rgba(255,255,255,0.1);
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.card-container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #1a1840;
+    border: 2px solid #1e1f23;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-container .card .box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+    pointer-events: none;
+}
+
+.card-container .card .box:hover{
+    transform: translateY(-50px);
+    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+}
+
+.card-container .card .box .content{
+    padding: 20px;
+    text-align: center;
+}
+
+.card-container .card .box .content h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255, 255,255,0.05);
+}
+
+.card-container .card .box .content h3{
+    position: relative;
+    font-size: 1.8em;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card-container .card .box .content p{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.card-container .card .box .content ul li{
+    list-style-type: square;
+    color: rgba(208, 208, 208,0.77);
+    margin-left: 5px;
+
+    
+}
+
+.card-container .card .box .content a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #000;
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card-container .card:nth-child(1) .box .content a{
+    background: #2196f3;
+}
+
+.card-container .card:nth-child(2) .box .content a{
+    background: #e91e63;
+}
+
+.card-container .card:nth-child(3) .box .content a{
+    background: #21f321;
+}
+
+
+/* about */
+
+.about{
+    position: relative;
+    top: 100px;
+    margin: 10px 50px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin: 10px 0px;
+    color: #fff;
+}
+
+.about p{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 10px 15px;
+}
+
+.about h3{
+    font-size: 1.8em;
+    margin: 10px 0px;
+    color: #fff;
 }
