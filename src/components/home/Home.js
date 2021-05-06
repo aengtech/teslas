@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Intro from './Intro'
+// import Chart from './chart/Chart';
 import Welcome from './Welcome';
 
 const Home = () => {
@@ -8,6 +9,8 @@ const Home = () => {
     <>
       <Intro />
       <Welcome />
+      <hr/>
+      {/* <Chart /> */}
     </>
   )
 }

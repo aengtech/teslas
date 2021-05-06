@@ -5,7 +5,6 @@ const About = () => {
     <div className="about">
       <h2> All About Saving Energy and Resources </h2>
       <p> As of February 2021,  Tesla bought bitcoin worth 1.5 billion $ and immediately started accepting payment in bitcoin as it's first crypto currency. but the world was in doubts because Elon Musk the CEO of Tesla in a tweet said Dogecoin will be the future of Cryptocurrency and he encouraged major dogecoin holders. </p>
-      <br/>
       <p> After vouching for Bitcoin, Tesla CEO Elon Musk has now said that if major Dogecoin cryptocurrency holders sell their coins, he will give them his full support. </p>
       <p> He has been talking a lot about Dogecoin recently and it has come to our understanding that Dogecoin has a future in Tesla. </p>
       <p> Some of his followers believe Dogecoin will be the Official crypto currency in Mars </p>

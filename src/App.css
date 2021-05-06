@@ -14,7 +14,7 @@ body{
 }
 
 header{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -176,6 +176,7 @@ section img{
 
 .card-container .card{
     position: relative;
+    background: rgb(158 155 206 / 15%);
     min-width: 320px;
     height: 470px;
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
@@ -285,6 +286,7 @@ section img{
 /* about */
 
 .about{
+    background: linear-gradient( to top, #1c0522, transparent);
     position: relative;
     top: 100px;
     margin: 10px 50px;
@@ -306,4 +308,34 @@ section img{
     font-size: 1.8em;
     margin: 10px 0px;
     color: #fff;
+}
+
+/* plans */
+
+.plans{
+    margin: 30px auto;
+}
+
+.plans h3{
+    font-size: 1.8em;
+    color: #fff;
+}
+
+.plans .info{
+    position: relative;
+    margin: 30px auto;
+    color: rgb(250, 238, 206);
+    width: 560px;
+
+}
+
+.plans .info p{
+    padding: 5px;
+}
+
+/* auth */
+
+.auth{
+    width: 560px;
+    margin: 30px auto;
 }

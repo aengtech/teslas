@@ -68,8 +68,10 @@ const Welcome = () => {
               <ul>
                 <li> (40% discount ++) </li>
                 <li> (free charge up to 3 years) </li>
-                <li> (free insurance/warranty up to 10years) </li>
-                <li> (get a Million mile panasonic lithium-ion battery installed when released ) </li>
+                <li> (free insurance) </li>
+                <li>(Up to 10years warranty)</li>
+                <li>( Car tracker and other accessories installed) </li>
+                <li> (get a Million-Mile panasonic lithium-ion battery installed when released ) </li>
               </ul>
               <Link to="/plans">Read More</Link>
             </div>
@@ -84,7 +86,7 @@ const Welcome = () => {
               <h3> Even Plan </h3>
               <p> Insure your car from theft, accident, e.t.c. Your safety is our number one priority </p>
               <ul>
-                <li> (Installation of tracking devices)</li>
+                <li> (Installation of tracking tools)</li>
                 <li> (Free sotware updates)</li>
               </ul>
               <Link to="#"> Coming Soon </Link>
